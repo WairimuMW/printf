@@ -91,19 +91,3 @@ int _printf(const char *format, ...)
 	print_buffer(buffer, arg_list, len);
 	return (total);
 }
-
-/**
- * main - sample main program
- *
- * Return: 0 on success
- */
-int main(void)
-{
-	_printf("\nTest!\n");
-   	 sleep(1);
-    	_printf("\nStrings, Characters, and Numbers...... %s %c%drld\n\n", "Hello", 'W', 0);
-    	sleep(1);
-    	_printf("Binary...... %b \n", "Hello");
-    	sleep(1);
-    	return (0);
-}

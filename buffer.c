@@ -13,7 +13,7 @@ char *create_buffer(void)
 	if(buffer == NULL)
 		return (NULL);
 
-	return (NULL);
+	return (buffer);
 }
 
 /**
@@ -26,8 +26,11 @@ char *create_buffer(void)
  */
 void print_buffer(char *buffer, va_list arg_list, int len)
 {
-	write(1, buffer, len); /* print contents of buffer */
-	free(buffer); /* free buffer */
+	char *new_buffer;
+	
+	new_buffer = realloc(buffer, len); /* realloc to more accurate memory size */
+	write(1, new_buffer, len); /* print contents of buffer */
+	free(new_buffer); /* free buffer */
 	va_end(arg_list); /* end arg_list traversal */
 }
 

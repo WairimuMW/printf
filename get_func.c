@@ -15,6 +15,8 @@ char *(*get_func(char ident))(va_list)
 		{'d', print_int},
 		{'i', print_int},
 		{'b', print_binary},
+		{'r', rev_string},
+		{'R', rot13},
 		{'\0', NULL}
 	};
 

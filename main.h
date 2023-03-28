@@ -22,6 +22,8 @@ char *print_char(va_list arg_list);
 char *print_string(va_list arg_list);
 char *print_int(va_list arg_list);
 char *print_binary(va_list arg_list);
+char *rev_string(va_list arg_list);
+char *rot13(va_list arg_list);
 
 /* helper functions */
 char *(*get_func(char ident))(va_list);
